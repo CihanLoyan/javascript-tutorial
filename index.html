@@ -4,8 +4,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script> // Internal Script
+        console.log("Internal Script in head")
+    </script>    
 </head>
 <body>
+    <button onclick="alert('Welcome to Challenge')">Click Me</button> <!-- internal script-->
 
+    <!-- script'i BODY ve HEAD içerisine yazma farkı:   
+        Sayfa yukarıdan aşağıya okunur. Bu yüzden önce head okunur.
+        Eğer script'i head içerisine yazarsak, body'nin içerisindeki bir element'te script
+        içerisinden erişmek istediğimizde DOM'un hazır olup olmadığını kontrol 
+        eden fazladan bir kod yazmamız gerekir. Çünkü DOM ağacı oluşmamıştır ve
+        body içindeki bir element'e erişmeye çalıştığımızda bu element hazır olmadığı için
+        ona erişemeyiz. Öncelikle head içindeki scriptlerin yüklenmesini bekleriz,
+        bu yüzden sayfa geç açılır.
+        Eğer script'i body'nin sonuna yazarsak, script'in yazdığı yere gelene kadar zaten
+        DOM ağacı oluşmuş olur ve DOM'un hazır olup olmadığını kontrol etmeye gerek kalmadan
+        body içerisindeki elemente erişebiliriz.
+        
+        CSS'i neden head içerisinde tanımlamalıyız?
+        Eğer head içerisinde değil de body'nin sonunda tanımlarsak, DOM ağacı oluşurken
+        öncelikle sayfa stilsiz bir şekilde yüklenir. Bu istemeyeceğimiz bir durum olduğu için
+        css dosyamızı head içerisinde tanımlarız.
+    --> 
+
+    <script> // Internal Script
+        console.log("Internal Script in body")
+    </script>
+
+    <script src="./01_index.js"></script> <!-- External Script -->
+    <script src="./02_second.js"></script> <!-- External Script -->
+    <script src="./03_dataTypes.js"></script> <!-- External Script -->
 </body>
 </html>
