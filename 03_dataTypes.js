@@ -7,6 +7,8 @@ console.log(typeof TRUE);  // undefied
 console.log(typeof null);
 console.log(typeof undefined);
 
+console.log("-------------------------------------------------");
+
 /* 
     Değişken isimlendirme kuralları:
         Sayı ile başlayamaz.
@@ -21,10 +23,11 @@ let _$var4 = 'Fourth variable'
 /* Aynı tipte değişkenleri alt alta şu şekilde yazabiliriz: */
 let firstName = "cihan",
     age = 24,
-    isMarried = false
-    identity = undefined
+    isMarried = false,
+    born,  // değişken oluşturulup değer ataması yapılmadığında undefined olur. 
+    identity = undefined, // Bu kullanım tercih edilir. 
     job = null
 
 const GENDER = 'Male'
 
-console.log(firstName, age, isMarried, job, identity);
+console.log(firstName, age, isMarried, identity, born, job);

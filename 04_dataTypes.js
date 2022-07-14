@@ -1,4 +1,4 @@
-// VAR - LET - CONST
+console.log("----------------------- var / let / const -------------------------");
 
 // let 1 kez tanımlanır. Tanımlanan değer sonraki satırlarda değiştirilebilir.
 let age = 24
@@ -32,24 +32,3 @@ console.log("PI: " + PI);
     let bu kullanıma izin veriyordu.
 */
 
-
-/*
-    var -> function scope
-    let ve const -> block scope
-*/ 
-
-function demo(){
-    console.log(message);   // undefined
-    /* 
-        Eğer bu scope içerisinde message diye bir değişken tanımlanmamış olsaydı:
-        Uncaught ReferenceError: message is not defined
-
-        undefined ve not defined farkını bu örnek üzerinden kavramaya çalış !!!
-    */
-
-    var message = "Merhaba Türkiye" // Bu değişkene yalnızca bu fonksiyon içinden erişilebilir.
-    console.log(message);
-}
-
-console.log(message);   // Uncaught ReferenceError: message is not defined
-demo()  // function scope olan message çalışır.
