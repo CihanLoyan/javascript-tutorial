@@ -8,7 +8,8 @@ var message2 = "Housting"
 console.log(message2);
 
 /*
-Yukarıdaki değişkenlerin undefined olmasının sebebi 
+
+Yukarıdaki değişkenin undefined olmasının sebebi 
 JavaScript'teki HOUSTING özelliğinden kaynaklanır.
 
 var message2;
@@ -41,8 +42,8 @@ console.log("------------------------------------------");
 let message3 = "Message3"
 console.log(message3);
 
-/* 
-console.log(message4);   // Uncaught ReferenceError: Cannot access 'message4' before initialization
+
+/* console.log(message4);   // Uncaught ReferenceError: Cannot access 'message4' before initialization
 let message4 = "Message4"
 
 console.log(MESSAGE9); // Uncaught ReferenceError: Cannot access 'message9' before initialization
@@ -54,10 +55,11 @@ const MESSAGE9 = "Message9";
     Uncaught SyntaxError: Identifier 'age' has already been declared
 */
 
-/* 
-let message5 = "Message5";
-let message5 = "newMessage5" // Uncaught SyntaxError: Identifier 'message5' has already been declared   
 
+/* let message5 = "Message5";
+let message5 = "newMessage5" // Uncaught SyntaxError: Identifier 'message5' has already been declared    */
+
+/*
 const MESSAGE7 = "Message7";
 console.log(MESSAGE7);
 const MESSAGE7 = "newMessage7"; // Uncaught SyntaxError: Identifier 'message7' has already been declared
@@ -67,7 +69,7 @@ let message6 = "Message6";
 message6  = "newMessage6";
 console.log(message6);
 message6 = "newerMessage6";
-console.log(message6);
+console.log(message6); 
 
 /* 
 const MESSAGE8 = "Message8";
@@ -81,14 +83,58 @@ MESSAGE8 = "newMessage8";  // Uncaught TypeError: Assignment to constant variabl
 */
 
 /*
-Genelde “sabit kodlanmış” sabitler için tamamen büyük harf kullanırız. 
-Bir başka deyişle, kod çalışmadan bilinen ve doğrudan koda yazılan değerler için kullanılır.
+Genelde “sabit kodlanmış” değişkenler için tamamen büyük harf kullanırız. 
 Bu kod cümlesinde dogumGunu tam da bu tanıma uymaktadır. Bundan dolayı büyük harf ile kullanılabilir.
 Buna karşı yaş değişkeni bir fonksiyonun çıktısına göre değer almaktadır. 
 Bugün diyelim ki 20 yaşındaysanız bir yıl sonra 21 yaşında olacaksınız demektir. 
-Tabi bu kural kod çalıştığında değişmez. 
-Yani yıla göre değer alacaktır cümlesi değişmeyecektir.
 Fakat değer değiştiğinden dolayı dogumGunu değişkenine göre daha az sabittir.
 Hesaplanan bir değerdir. Bundan dolayı bunu küçük harfle tutmanız gerekmektedir.
 */
 
+console.log("----------------------------------------------------------------");
+
+/* var age = 15
+console.log("Age: " + age);
+
+age = 16
+console.log("Age: " + age);
+
+var age = 17  // NOT: Tekrar oluşturulan değişkene değer atanırsa yeni atanan değeri alır.
+console.log("Age: ", age) */
+
+console.log("-----------------------------------------------------------------");
+
+// let 1 kez tanımlanır. Tanımlanan değer sonraki satırlarda değiştirilebilir.
+
+/* let age = 15
+console.log("Age: ", age);
+
+age = 16
+console.log("Age: ", age);
+
+let age = 17 // Uncaught SyntaxError: Identifier 'age' has already been declared */
+
+console.log("----------------------------------------------------------------");
+
+// const 1 kez tanımlanır, değeri let'te olduğu gibi sonradan değiştirelemez.
+
+/* const AGE = 15
+console.log("Age: ", AGE);
+
+// AGE = 16  // Uncaught TypeError: Assignment to constant variable.
+
+const AGE = 17  // Uncaught SyntaxError: Identifier 'AGE' has already been declared */
+
+console.log("-------------------------- EKSTRA --------------------------------------");
+
+/* 
+console.log(message2);
+var message2 = "Housting"
+console.log(message2);
+
+console.log(message4);   // Uncaught ReferenceError: Cannot access 'message4' before initialization
+let message4 = "Message4"
+
+console.log(MESSAGE9); // Uncaught ReferenceError: Cannot access 'message9' before initialization
+const MESSAGE9 = "Message9";
+*/

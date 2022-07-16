@@ -117,7 +117,6 @@ user.age = 15 // hata vermez
 console.log(user); // property'nin eklenmediğini görebiliriz.
 
 console.log("------------------------ SON OLARAK -------------------------");
-
 for (var i = 0; i <3; i++) {
     console.log("var ile for:", i);
 }
