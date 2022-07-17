@@ -78,12 +78,12 @@ console.log(z); // undefined
 
 console.log("---------------------- mutable / immutable ----------------------");
 
-let user = {
-    firstName: "cihan",
-    lastName: "loyan"
+let author = {
+    fullName: "Fuat Sezgin",
+    age: 94
 }
-user.firstName = "yavuz";    // obje  içindeki değerlere erişip  değiştirebiliriz.
-console.log(user);
+author.age = 95;
+console.log(author.age);   // Çıktı -> : 95
 
 user = {    // let ile tanımlanan objenin kendisini değiştirebiliriz. (mutable)
     firstName: "canan"
